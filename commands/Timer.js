@@ -13,21 +13,15 @@ exports.run = (client, message, args) => {
       res.on('end', function(){
         var i = 1
         var Don = JSON.parse(body);
-          if( args[2] * 1000) {
+          if( args[1] * 1000) {
           function news() {
             console.log(Don.data.children[0].data.url);
             message.channel.send(Don.data.children[0].data.url);
           }
-          setInterval(news, args[2] * 3600000);
+          setInterval(news, args[1] * 3600000);
           } else {
-          var num = 0
-          do{
-          console.log((num), Don.data.children[num].data.title);
-          message.channel.send((num) + " " + Don.data.children[num].data.title);
-          num++;
-        }
-        while (num < args[1])
-      }
+			message.channel.send("Timer <subreddit> <Time in hours>")
+		  }
       });
   });
 }
