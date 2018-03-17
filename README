@@ -1,5 +1,8 @@
-$foo <subreddit> <how many results> <time till repeat in hours>
+$news <subreddit> f|s|r <number>
+f-find
+s-show
+r-reddit link
 
-Results only matter if you don't have it repeat
+$timer <subreddit> <timer in hours>
 
 Recomended 3-6 hours so you don't get the same story multiple times.
