@@ -1,35 +1,43 @@
 exports.run = (client, message, args) => {
   const http = require('https');
+    var num = 0
     http.get(`https://www.reddit.com/r/${args[0]}/top/.json`, (res) => {
           var body = '';
       res.on('data', function(chunk){
           body += chunk;
       });
       res.on('end', function(){
-        var Don = JSON.parse(body);
-		if (agrs[1] === "f") {
+       var Don = JSON.parse(body);
+	     if (args[1] === "l") {
           do{
           console.log((num), Don.data.children[num].data.title);
           message.channel.send((num) + " " + Don.data.children[num].data.title);
           num++;
+		     }
+         while (num < args[2])
+       }
+        else if (args[1] === "s") {
+		  try {
+          var num2 = 0
+          console.log(Don.data.children[args[2]].data.url);
+          message.channel.send(Don.data.children[args[2]].data.url);
 		  }
-        while (num < args[2])
-      }else if (agrs[1] === "s") {
-		  do{
-          console.log(Don.data.children[num].data.url);
-          message.channel.send(Don.data.children[num].data.url);
-          num++;
+      catch(err) {
+        message.channel.send("error")
+      }
+	     }
+        else if (args[1] === "r") {
+		  try {
+          var num3 = 0
+		      console.log("www.reddit.com" + Don.data.children[args[2]].data.permalink)
+          message.channel.send("www.reddit.com" + Don.data.children[args[2]].data.permalink);
 		  }
-        while (num < args[2])
-	  }else if (agrs[1] === "r") {
-		  do{
-		  console.log("www.reddit.com" + Don.data.children[num].data.permalink)
-          message.channel.send("www.reddit.com" + Don.data.children[num].data.permalink);
-          num++;
-		  }
-        while (num < args[2])
-	  }else {
-		  message.channel.send("$news <subreddit> f|s|r <number>")
+      catch(err) {
+        message.channel.send("error")
+      }
+	   }
+     else {
+		  message.channel.send("$news <subreddit> l|s|r <number>")
 	  }
       });
   });

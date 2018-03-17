@@ -16,14 +16,10 @@ exports.run = (client, message, args) => {
         var Don = JSON.parse(body);
           if( args[1] * 1000) {
           function news() {
-            if (z === Don.data.children[m].data.url) {
-             m + 1
-             } else {
-             var z === Don.data.children[m].data.url
+             var m = Math.floor((Math.random() * 5) + 0);
              console.log(Don.data.children[m].data.url);
              message.channel.send(Don.data.children[m].data.url);
-             m = 0
-            }
+
           }
           setInterval(news, args[1] * 3600000);
           } else {
