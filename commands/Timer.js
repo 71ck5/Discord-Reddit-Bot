@@ -3,6 +3,7 @@ function sleep(x) {
       setTimeout(cb, x)
    }
 }
+var m = 0
 exports.run = (client, message, args) => {
   const http = require('https');
     http.get(`https://www.reddit.com/r/${args[0]}/top/.json`, (res) => {
@@ -15,8 +16,14 @@ exports.run = (client, message, args) => {
         var Don = JSON.parse(body);
           if( args[1] * 1000) {
           function news() {
-            console.log(Don.data.children[0].data.url);
-            message.channel.send(Don.data.children[0].data.url);
+            if (z === Don.data.children[m].data.url) {
+             m + 1
+             } else {
+             var z === Don.data.children[m].data.url
+             console.log(Don.data.children[m].data.url);
+             message.channel.send(Don.data.children[m].data.url);
+             m = 0
+            }
           }
           setInterval(news, args[1] * 3600000);
           } else {
