@@ -7,6 +7,6 @@
              "$stock <symbol>");
    		  }
         catch(err) {
-          message.channel.send("Idk how but you screwed it up")
+          message.channel.send("You fucked it up")
         }
   }
