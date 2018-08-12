@@ -8,13 +8,6 @@
 
 - Enter your bot token from discord into config.json
 
-
-l = list number of most popular posts on subreddit's headline
-
-s = show the story at number in list (from reddit or third-party source)
-
-r = reddit link only for story at number in list
-
 ```
 $news <subreddit> l|s|r <number>
 
@@ -24,4 +17,9 @@ $stock <symbol>
 
 $coin <coin symbol>
 ```
+l = list number of most popular posts on subreddit's headline
+
+s = show the story at number in list (from reddit or third-party source)
+
+r = reddit link only for story at number in list
 [applications]: https://discordapp.com/developers/applications/me
