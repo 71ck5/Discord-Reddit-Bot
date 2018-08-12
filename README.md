@@ -1,5 +1,4 @@
 Head over to the [applications] page.
-[I'm an inline-style link](https://www.google.com)
 Click “new application”. Give it a name, picture and description.
 Click “Create Bot User” and click “Yes, Do It!” when the dialog pops up.
 Copy down the token.
