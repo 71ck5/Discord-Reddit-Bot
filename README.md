@@ -1,12 +1,12 @@
-Head over to the [applications] page.
+- Head over to the [applications] page.
 
-Click “new application”. Give it a name, picture and description.
+- Click “new application”. Give it a name, picture and description.
 
-Click “Create Bot User” and click “Yes, Do It!” when the dialog pops up.
+- Click “Create Bot User” and click “Yes, Do It!” when the dialog pops up.
 
-Copy down the token.
+- Copy down the token.
 
-Enter your bot token from discord into config.json
+- Enter your bot token from discord into config.json
 
 
 l = list number of most popular posts on subreddit's headline
