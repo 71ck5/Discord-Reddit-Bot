@@ -16,12 +16,12 @@ s = show the story at number in list (from reddit or third-party source)
 r = reddit link only for story at number in list
 
 
-$news \<subreddit> l|s|r <number>\
+$news \<subreddit> l|s|r /<number>
 
-$timer \<subreddit> <Time in hours>\
+$timer \<subreddit> /<Time in hours>
 
-$stock \<symbol>\
+$stock \<symbol>
 
-$coin \<coin symbol>\
+$coin \<coin symbol>
 
 [applications]: https://discordapp.com/developers/applications/me
