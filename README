@@ -1,8 +1,8 @@
-$news <subreddit> f|s|r <number>
-f-find
-s-show
-r-reddit link
+l = list number of most popular posts on subreddit's headline
+s = show the story at number in list (from reddit or third-party source)
+r = reddit link only for story at number in list
 
-$timer <subreddit> <timer in hours>
-
-Recomended 3-6 hours so you don't get the same story multiple times.
+$news <subreddit> l|s|r <number>
+$timer <subreddit> <Time in hours>
+$stock <symbol>
+$coin <coin symbol>
